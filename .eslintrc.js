@@ -18,5 +18,15 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-  }
+    'quote-props': [1, 'as-needed'],
+    quotes: [1, 'single']
+  },
+  overrides: [
+    {
+      files: ['src/api/**/*.ts'],
+      rules: {
+        camelcase: 'off'
+      }
+    }
+  ]
 }
