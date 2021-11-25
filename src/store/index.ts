@@ -1,33 +1,29 @@
 import { InjectionKey } from 'vue'
 import { createStore, Store, useStore as useBaseStore } from 'vuex'
+import { LoginUserInfo } from './types'
+import createPersistedState from 'vuex-persistedstate'
 
-interface Data {
-  name: string;
-  age: number;
-}
 export interface State {
-  count: number;
-  mes: string;
-  objData?: Data;
+  user: LoginUserInfo | null
 }
 
 // define injection key
 export const key: InjectionKey<Store<State>> = Symbol('state')
 
+const persitPlugs = createPersistedState({
+  paths: ['user']
+})
+
 export const store = createStore<State>({
   state () {
     return {
-      count: 0,
-      mes: 'hello, vuex-ts',
-      objData: {
-        name: 'myName',
-        age: 20
-      }
+      user: null
     }
   },
+  plugins: [persitPlugs],
   mutations: {
-    increment (state) {
-      state.count++
+    setUser (state, payload: LoginUserInfo | null) {
+      state.user = payload
     }
   }
 })

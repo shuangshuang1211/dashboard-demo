@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import SideBar from './SideBar/SideBar.vue'
+import SideBar from './sideBar/SideBar.vue'
+import HeaderBar from './header/HeaderBar.vue'
 </script>
 
 <template>
@@ -8,7 +9,9 @@ import SideBar from './SideBar/SideBar.vue'
       <side-bar />
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <header-bar />
+      </el-header>
       <el-main>
         <router-view />
       </el-main>
@@ -23,8 +26,15 @@ import SideBar from './SideBar/SideBar.vue'
 .el-aside {
   background-color: #545c64;
   /* border-style: #545c64; */
+  width: fit-content
 }
 .el-header {
-  background-color: #646f79;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.el-main {
+  background-color: #e2e8ec;
 }
 </style>

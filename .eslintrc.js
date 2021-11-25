@@ -23,7 +23,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/api/**/*.ts'],
+      files: ['src/api/**/*.ts', 'src/**/types.ts'],
       rules: {
         camelcase: 'off'
       }

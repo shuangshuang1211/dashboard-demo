@@ -14,7 +14,7 @@ const routes: RouteRecordRaw = {
     {
       path: 'admin',
       name: 'permission-admin',
-      component: () => import('@/views/permission/adminView.vue')
+      component: () => import('@/views/permission/AdminView.vue')
     },
     {
       path: 'rule',
