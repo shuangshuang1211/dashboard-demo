@@ -1,3 +1,23 @@
+<script setup lang="ts" >
+import { ref } from 'vue'
+import { ROUTE_ITEMS } from './constant'
+import MenuItem from './MenuItem.vue'
+import { ArrowRight, ArrowLeft } from '@element-plus/icons'
+// import { ElMenuItem } from 'element-plus'
+const isCollapse = ref(true)
+const handleOpen = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+const handleClose = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+
+const handleCollapse = () => {
+  isCollapse.value = !isCollapse.value
+}
+// const a = <Edit />
+</script>
+
 <template>
   <div class="container">
     <div class="menu-title">
@@ -34,27 +54,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-import { ROUTE_ITEMS } from './constant'
-import MenuItem from './MenuItem.vue'
-import { ArrowRight, ArrowLeft } from '@element-plus/icons'
-// import { ElMenuItem } from 'element-plus'
-const isCollapse = ref(true)
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-
-const handleCollapse = () => {
-  isCollapse.value = !isCollapse.value
-}
-// const a = <Edit />
-</script>
-
-<style scoped>
+<style scoped lang="scss">
 .container {
   width: inherit
 }
