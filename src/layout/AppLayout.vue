@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SideBarMenu from './sideBar/SideBarMenu.vue'
+import SideBarMenu from '@/layout/sideBar/SideBarMenu.vue'
 import HeaderBar from './header/HeaderBar.vue'
 </script>
 
