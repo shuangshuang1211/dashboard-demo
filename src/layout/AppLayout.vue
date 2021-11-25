@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import SideBar from './sideBar/SideBar.vue'
+import SideBarMenu from './sideBar/SideBarMenu.vue'
 import HeaderBar from './header/HeaderBar.vue'
 </script>
 
 <template>
   <el-container>
     <el-aside>
-      <side-bar />
+      <side-bar-menu />
     </el-aside>
     <el-container>
       <el-header>
