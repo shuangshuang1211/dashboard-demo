@@ -6,21 +6,21 @@ import { ref } from 'vue'
 import CommonDialog from './CommonDialog.vue'
 import { getRoles } from '@/api/user'
 
-const props = defineProps({
-  // onConfirm: {
-  //   type: Function as PropType<(evt: MouseEvent) => void>,
-  //   default: () => ''
-  // },
-  // onClose: {
-  //   type: Function as PropType<(evt: MouseEvent) => void>,
-  //   default: () => ''
-  // }
-})
-interface EmitsType {
-  (e: 'update:dialogVisible', value: boolean): void
-}
-const emits = defineEmits<EmitsType>()
-console.log(props, emits)
+// const props = defineProps({
+//   // onConfirm: {
+//   //   type: Function as PropType<(evt: MouseEvent) => void>,
+//   //   default: () => ''
+//   // },
+//   // onClose: {
+//   //   type: Function as PropType<(evt: MouseEvent) => void>,
+//   //   default: () => ''
+//   // }
+// })
+// interface EmitsType {
+//   (e: 'update:dialogVisible', value: boolean): void
+// }
+// const emits = defineEmits<EmitsType>()
+// console.log(props, emits)
 
 const form = ref<typeof ElForm | null>(null)
 const formLoading = ref(false)
